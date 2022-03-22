@@ -1,3 +1,4 @@
+<!-- Template -->
 <template>
     <div class="painel">
         <h2 class="painel-titulo" @dblclick="visivel= !visivel">{{ titulo }}</h2>
@@ -9,6 +10,7 @@
     </div>
 </template>
 
+<!-- Script -->
 <script>
 export default {
     props: [
@@ -23,6 +25,7 @@ export default {
 }
 </script>
 
+<!-- Style -->
 <style scoped>
 
   .painel {

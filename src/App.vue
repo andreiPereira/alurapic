@@ -1,3 +1,4 @@
+<!-- Template -->
 <template>
   <div class="corpo">
 
@@ -15,6 +16,7 @@
   </div>
 </template>
 
+<!-- Script -->
 <script>
 
 import Painel from './components/shared/painel/Painel.vue';
@@ -55,7 +57,10 @@ export default {
       .then(fotos => this.fotos = fotos);
   }
 }
+
 </script>
+
+<!-- Style -->
 <style>
 
   .centralizado {
