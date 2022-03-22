@@ -32,7 +32,7 @@ export default {
 
   data () {
     return {
-      titulo: 'Alurapic', 
+      titulo: 'Card de Imagens', 
       fotos: [],
       filtro: ''
     }
