@@ -16,7 +16,7 @@
 
     export default {
         props: {
-            rotas{
+            rotas: {
                 type: Array,
                 required: true
             }
