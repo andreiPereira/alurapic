@@ -6,16 +6,26 @@ Vue.directive('meu-transform', {
         
         let current = 0;
         el.addEventListener('dblclick', function(){
+
+            // inicializando increment e animate
+            let increment = 90;
+            let animate = false;
+
+            if(binding.value){
+                // recebe incremento mandado no obj
+                increment = binding.value.incremento;
+                
+                // recebe animate mandado no obj
+                animate = binding.value.animate;
+            }
             
-            // ele vai receber o valor para girar da função, e se não receber , vai ser 90
-            let increment = binding.value || 90;
             current+=increment;
             
-            //adiciona um movimento no giro da imagem
-            el.style.transition = 'transform 0.5s';
-            
-            // aplica o comando da rotação
             el.style.transform = `rotate(${current}deg)`;
+            // aplica o comando da rotação
+            
+            //adiciona um movimento no giro da imagem
+            if(animate) el.style.transition = 'transform 0.5s';
         });
     }
 });

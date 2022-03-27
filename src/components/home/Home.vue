@@ -7,8 +7,8 @@
     <ul class="lista-fotos">
       <li class="lista-fotos-item" v-for="foto of fotosComFiltro">
         <meu-painel :titulo="foto.titulo">
-          <!-- meu transform vai mandar o binding como parametro -->
-          <imagem-responsiva v-meu-transform ="45" :url="foto.url" :titulo="foto.titulo"/>
+          <!-- meu transform vai mandar os parametros como objeto para o Transform.js -->
+          <imagem-responsiva v-meu-transform ="{ incremento: 360, animate: true}" :url="foto.url" :titulo="foto.titulo"/>
           <meu-botao 
             tipo="button" 
             rotulo ="REMOVER" 
